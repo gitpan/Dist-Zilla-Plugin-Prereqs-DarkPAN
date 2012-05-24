@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::ExternalPrereq::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Dist::Zilla::ExternalPrereq::VERSION = '0.2.0';
+  $Dist::Zilla::ExternalPrereq::VERSION = '0.2.1';
 }
 
 # FILENAME: ExternalPrereq.pm
@@ -91,7 +91,7 @@ Dist::Zilla::ExternalPrereq - A representation of an externalised prerequisite
 
 =head1 VERSION
 
-version 0.2.0
+version 0.2.1
 
 =head1 METHODS
 
@@ -107,7 +107,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -7,7 +7,7 @@ BEGIN {
   $Dist::Zilla::Role::xPANResolver::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Dist::Zilla::Role::xPANResolver::VERSION = '0.2.0';
+  $Dist::Zilla::Role::xPANResolver::VERSION = '0.2.1';
 }
 
 # FILENAME: xPANResolver.pm
@@ -38,10 +38,10 @@ sub _content_for {
 sub _parse_for {
   my ( $self, $url ) = @_;
   my $cache_url = $url . '#parsed';
+  require Parse::CPAN::Packages;
   return _cache->get_code(
     $cache_url,
     sub {
-      require Parse::CPAN::Packages;
       my $content = $self->_content_for($url);
       return Parse::CPAN::Packages->new($content);
     }
@@ -84,7 +84,7 @@ Dist::Zilla::Role::xPANResolver - Tools to resolve a package to a URI from a CPA
 
 =head1 VERSION
 
-version 0.2.0
+version 0.2.1
 
 =head1 METHODS
 
@@ -111,7 +111,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Kent Fredric <kentnl@cpan.org>.
+This software is copyright (c) 2012 by Kent Fredric <kentnl@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
